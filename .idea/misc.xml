@@ -30,6 +30,18 @@
         <entry key="..\:/Madina/app/src/main/res/layout/profie_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/Madina/app/src/main/res/layout/vacations_recycler.xml" value="0.25416666666666665" />
         <entry key="..\:/Madina/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Madina-master/app/src/main/res/drawable/circle_image_card.xml" value="0.1065" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Madina-master/app/src/main/res/drawable/needs_background.xml" value="0.1065" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Madina-master/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Madina-master/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Madina-master/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Madina-master/app/src/main/res/layout/activity_sign.xml" value="0.1" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Madina-master/app/src/main/res/layout/bottom_sheet.xml" value="0.2" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Madina-master/app/src/main/res/layout/fragment_needs.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Madina-master/app/src/main/res/layout/fragment_qrc.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Madina-master/app/src/main/res/layout/needs_recycler_item.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Madina-master/app/src/main/res/layout/profie_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Madina-master/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

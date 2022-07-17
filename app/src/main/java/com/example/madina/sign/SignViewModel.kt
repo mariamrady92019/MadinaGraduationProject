@@ -1,17 +1,14 @@
 package com.example.madina.sign
 
-import android.app.AlertDialog
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.example.madina.BaseViewModel
-import com.example.madina.LoginNavigator
+import com.example.madina.utils.BaseViewModel
 import com.example.madina.database.addUserToFirestore
 import com.example.madina.model.AppUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class SignViewModel:BaseViewModel<Navigator>( ) {
+class SignViewModel: BaseViewModel<SignupNavigator>( ) {
 
     val name = MutableLiveData<String>()
     val email = MutableLiveData<String>()

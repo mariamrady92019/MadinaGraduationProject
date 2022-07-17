@@ -1,13 +1,9 @@
 package com.example.madina.login
 
-import android.app.AlertDialog
 import android.content.ContentValues.TAG
-import android.nfc.Tag
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.example.madina.BaseViewModel
-import com.example.madina.LoginNavigator
+import com.example.madina.utils.BaseViewModel
 import com.example.madina.database.signIn
 import com.example.madina.model.AppUser
 import com.google.firebase.auth.FirebaseAuth
@@ -15,7 +11,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class LoginViewModel:BaseViewModel<Navigator>(){
+class LoginViewModel: BaseViewModel<LoginNavigator>(){
 
 
     var email =MutableLiveData<String>()
@@ -25,7 +21,9 @@ class LoginViewModel:BaseViewModel<Navigator>(){
 
     var fAauth :FirebaseAuth=FirebaseAuth.getInstance()
     var auth =Firebase.auth
-  fun login(){
+
+
+    fun login(){
 
       showLoading.value=true;
       auth.signInWithEmailAndPassword((email.value.toString().trim()), pass.value.toString().trim())

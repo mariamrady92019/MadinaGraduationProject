@@ -3,13 +3,12 @@ package com.example.madina.sign
 import android.content.Intent
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
-import com.example.madina.BaseActivity
 import com.example.madina.HomeActivity
-import com.example.madina.LoginNavigator
 import com.example.madina.databinding.ActivitySignBinding
 import com.example.madina.R
+import com.example.madina.utils.BaseActivity
 
-class SignActivity : BaseActivity<ActivitySignBinding,SignViewModel>(),Navigator {
+class SignActivity : BaseActivity<ActivitySignBinding, SignViewModel>(),SignupNavigator {
 
 
     lateinit var model:SignModelClass
@@ -69,6 +68,7 @@ class SignActivity : BaseActivity<ActivitySignBinding,SignViewModel>(),Navigator
 
         return validate
     }
+
     fun setRegesterBtnClickListener(){
 
         viewDataBinding.regesterBtn.setOnClickListener {

@@ -1,27 +1,24 @@
 package com.example.madina.login
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.madina.BaseActivity
 import com.example.madina.HomeActivity
-import com.example.madina.LoginNavigator
 import com.example.madina.R
 import com.example.madina.databinding.ActivityLoginBinding
 import com.example.madina.forgetpassword.ForgetPasswordActivity
 import com.example.madina.sign.SignActivity
-import com.example.madina.sign.SignViewModel
+import com.example.madina.utils.BaseActivity
 
 
-class LoginActivity :BaseActivity<ActivityLoginBinding,LoginViewModel>(),Navigator {
+class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(),LoginNavigator {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         viewDataBinding.lvm= viewModel
         viewModel.navigator=this
-        viewModel.checkCurrentUser()
+         viewModel.checkCurrentUser()
          setLoginBtnClickListener()
          viewModel.resetPass()
 

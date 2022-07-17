@@ -3,6 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+         <variable
+             name="vm"
+             type="com.example.madina.weekend.WeekEndViewModel" />
+
 
     </data>
 
@@ -10,7 +14,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+      <ProgressBar
+          android:id="@+id/progress_circular"
 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,11 +53,13 @@
                 android:layout_margin="@dimen/_10sdp">
 
                 <TextView
+                    android:id="@+id/start_date"
+                    android:text="@={vm.startDate}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:paddingTop="@dimen/_12sdp"
-                    android:id="@+id/start_date"
+
                     android:textStyle="bold"
                     android:textSize="@dimen/_16sdp"
                     android:layout_weight="1"
@@ -73,6 +88,9 @@
                 android:layout_margin="@dimen/_10sdp">
 
                 <TextView
+
+                    android:id="@+id/end_date"
+                    android:text="@={vm.endDate}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
@@ -81,7 +99,6 @@
                     android:textStyle="bold"
                     android:textSize="@dimen/_16sdp"
                     android:hint="@string/end_date"
-                    android:id="@+id/end_date"
                     android:paddingEnd="@dimen/_10sdp" />
 
                 <ImageView
