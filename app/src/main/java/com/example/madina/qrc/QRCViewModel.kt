@@ -3,14 +3,11 @@ package com.example.madina.qrc
 import android.content.DialogInterface
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.example.madina.utils.BaseViewModel
+import com.example.madina.utils.BaseViewModelQ
 import com.example.madina.utils.Constants.db
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 
 
-class QRCViewModel: BaseViewModel<QrcNavigator>(){
+class QRCViewModel: BaseViewModelQ<QrcNavigator>(){
 
 
     val sdn: MutableLiveData<String> = MutableLiveData<String>("");

@@ -4,7 +4,8 @@ import android.content.Context
 
 interface Navigator {
     fun openHomeScreen()
-
+    fun openLoginActivity()
+    fun getContext():Context
 
 
 }

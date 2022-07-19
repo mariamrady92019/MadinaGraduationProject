@@ -8,9 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 
-open abstract class BaseActivity<DB:ViewDataBinding,VM:BaseViewModel<*>>:AppCompatActivity() {
+open abstract class BaseActivity<DB:ViewDataBinding,VM:BaseViewModelQ<*>>:AppCompatActivity() {
 
 
     lateinit var viewModel: VM
@@ -89,5 +88,4 @@ fun AlertDialog.Builder.setNegativeButton(negActionName: String?, onCancelListen
 }
 
 fun AlertDialog.Builder.setPositiveButton(postActionName: String?, onOklListener: DialogInterface.OnCancelListener) {
-
 }

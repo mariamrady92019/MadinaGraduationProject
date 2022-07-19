@@ -17,5 +17,6 @@ interface WeekEndNavigator {
     abstract  fun hideLodingDialog()
     fun dismmissBottomSheetFragment()
     fun  listAllNeedsFromFirebase(list: MutableList<VacationModel>)
+    fun listAllVacationsFromFireBase(weekModel: MutableList<WeekEndModel>){}
 
 }

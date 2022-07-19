@@ -3,7 +3,7 @@ package com.example.madina.login
 import android.content.ContentValues.TAG
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import com.example.madina.utils.BaseViewModel
+import com.example.madina.utils.BaseViewModelQ
 import com.example.madina.database.signIn
 import com.example.madina.model.AppUser
 import com.google.firebase.auth.FirebaseAuth
@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class LoginViewModel: BaseViewModel<LoginNavigator>(){
+class LoginViewModel: BaseViewModelQ<LoginNavigator>(){
 
 
     var email =MutableLiveData<String>()

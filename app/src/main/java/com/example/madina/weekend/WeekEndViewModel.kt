@@ -5,18 +5,27 @@ import android.icu.util.Calendar
 import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.madina.utils.BaseViewModel
+import com.example.madina.database.getCollection
+import com.example.madina.utils.BaseViewModelQ
 import com.example.madina.utils.Constants
-import com.example.madina.utils.Constants.db
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
 import java.util.*
 
 
-class WeekEndViewModel : BaseViewModel<WeekEndNavigator>() {
+class WeekEndViewModel : BaseViewModelQ<WeekEndNavigator>() {
+
+    private val _text = MutableLiveData<String>().apply {
+        value = "This is home Fragment"
+    }
+    val text: LiveData<String> = _text
 
 
+    val db = Firebase.firestore
     var  startDate  : MutableLiveData<String> = MutableLiveData<String>()
     var  endDate : MutableLiveData<String> = MutableLiveData<String>()
     var  taxesAddedSuccess : MutableLiveData<String> = MutableLiveData<String>()
@@ -218,6 +227,20 @@ class WeekEndViewModel : BaseViewModel<WeekEndNavigator>() {
                     DialogInterface.OnClickListener { dialogInterface, i -> dialogInterface.dismiss() },null)
             }
 
+
+    }
+
+    fun getAllVacations() {
+        val userId = getUserId()
+        showLoading.value = true
+        getCollection("vacations")
+            .whereEqualTo("userId", userId)
+            .get().addOnSuccessListener { documents ->
+                navigator?.listAllVacationsFromFireBase(documents.toObjects(WeekEndModel::class.java))
+                showLoading.value = false
+            }.addOnFailureListener {
+                messageLivedata.value="check your connect please"
+            }
 
     }
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".needs.NeedsFragment"
+    tools:context=".needs.Needs"
     android:background="@color/bottomNavBackGround"
     >
 
@@ -35,8 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
-
-      <androidx.recyclerview.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/needs_recycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -48,7 +47,7 @@
         tools:listitem="@layout/needs_recycler_item"
         android:layout_marginHorizontal="@dimen/_10sdp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        />
+         />
 
          <ImageView
              android:id="@+id/no_data_or_internt_image"

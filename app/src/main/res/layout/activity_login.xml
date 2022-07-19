@@ -133,6 +133,7 @@
                         android:textColor="@color/black"
                         android:hint="@string/pass_hint"
                         app:errorEnabled="true"
+                        app:boxBackgroundColor="@color/zxing_transparent"
                         android:padding="6dp"
                         app:passwordToggleEnabled="true"
                         android:textColorHint="@color/gray">
