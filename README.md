@@ -1,20 +1,18 @@
-# FihHuda/فيه هديً
-
-It is a muslim application for reading and listening quran, reading Azkar [google play link](https://play.google.com/store/apps/details?id=tool.mariam.fihhuda)
+#GraduationProject
+It is an Application for Al-Azhar Madina
 
 
 # Which tools Used :
 * Material Design
 * MVVM architecture Pattern
+* DataBinding
 * Repository & Singlton design pattern
-* Retrofit for dealing with RESTApi
-* Services & thread
-* Live Data
-* Shared preferences for small local ecache
-* Gson converter
-* RecyclerView & Fragment
+* Firebase For DataBase
+* NavGraph
+* QRC
+* kotlin
 * bottom navigation to move between fragments
-* custom bottomSheet
+
                        
 
 
