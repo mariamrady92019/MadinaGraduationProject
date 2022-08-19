@@ -18,7 +18,15 @@
 * kotlin
 * bottom navigation to move between fragments
 
-                       
+# challenges
+* generate and scan QR
+* true date even if changed from phone
+* restrict allawed dates
+* get data scanned and save it 
+* check if this data scanned before or not
+
+                     
+
 
 
 ## Now lets go to see our Application !
